@@ -1,0 +1,547 @@
+html,
+body {
+  height: 100%;
+  font-size: 13px;
+  letter-spacing: .5px;
+  margin: 0;
+  overflow: auto;
+  color: #46494A;
+}
+
+@font-face {
+  font-family: Roboto Light;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+
+#navbar-wrapper {
+  background: rgba(0,0,0,0.5);
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  position: fixed;  
+    width: 100%;  
+    left: 0;  
+    top: 0;  
+    z-index: 100;  
+    border-top: 0; 
+  
+}
+
+.row{
+  margin: 0px;
+}
+
+
+/*#navbar-wrapper .sticky {
+  background: #333d47; 
+}*/
+
+/*#image{
+    background-image: url(https://thenovicechef.files.wordpress.com/2013/05/img_7185.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}*/
+
+#image22{
+    /*background-image: url(http://www.msccruises.com/Images/bg_choosecountry.jpg);*/
+    /*background-size: 100% 60px;*/
+    /*background-repeat: no-repeat;*/
+}
+
+
+ 
+/**
+* Footer
+**/
+
+/*change the footer div style*/
+#footer{
+  /*background-color: #000000;
+  background: -webkit-linear-gradient(circle,#333333,#000000);*/
+  padding: 1px;
+}
+.prodo-footer-theme{
+  background-color: #333d47;
+}
+
+/*change the footer row div style*/
+#prodo-row-footer{
+  margin: 0;
+}
+#footer-nav-heading{
+  color: #bdbdbd;
+  background-color:rgb(25, 32, 26);
+  border-radius: 5px;
+  width: 75%; 
+  /*text-align: center;*/
+  font-weight: bold;
+  font-size: 14px;
+  padding:2px;
+}
+
+#footer-nav-list{
+list-style-type:none;
+padding:5px;
+margin:5px;
+letter-spacing: 1px;
+}
+
+#prodo-copyright{
+  margin-left: 230px;
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+#body {
+  background-color: #fff;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.row {
+  margin: 0px;
+}
+
+.app-btn-primary {
+  color: #EEEEEE !important;
+  border: #015682 !important;
+  background: #015682 !important;
+  box-shadow: none;
+  border-radius: 0px;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.app-btn-primary:hover {
+  background: rgba(1, 86, 130, 0.9) !important;
+  box-shadow: 1px 1px 1px 1px #999 !important;
+}
+
+.app-btn-default {
+  color: #015682 !important;
+  border: solid thin #ddd !important;
+  background: #F4F6F3 !important;
+  box-shadow: none;
+  border-radius: 0px;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.app-btn-default:hover {
+  background: #F5F5F5 !important;
+  box-shadow: 1px 1px 1px 1px #999 !important;
+}
+
+.app-navbar-bottom {
+  padding: 15px;
+  background-color: #f4f6f3;
+}
+
+.app-table > thead {
+  background: #eeeeee none repeat scroll 0 0 !important;
+}
+
+.app-table > thead tr th,
+.app-table > tbody tr td {
+  border-bottom: medium none !important;
+  border-top: medium none !important;
+}
+
+.box-fixed {
+  border: medium none !important;
+  max-height: 55vh;
+  overflow-y: auto !important;
+  width: 100%;
+}
+
+.box-eod {
+  border: medium none !important;
+  min-height: 50vh;
+  max-height: 55vh;
+  overflow-y: auto !important;
+  width: 100%;
+}
+
+.data-empty-row {
+  border-style: dashed;
+  margin: 5px;
+  padding: 5px;
+  border-color: #ccc;
+  border-radius: 10px;
+}
+
+.app-table > tbody > tr:nth-child(2n) {
+  background: #f9f9f9 none repeat scroll 0 0;
+}
+
+.app-tab-pane {
+  margin: 10px auto;
+}
+
+.cash-recon-slip-table {
+  text-align: center;
+}
+
+.app-table > tbody > tr:nth-child(2n+1) {
+  background: #fff none repeat scroll 0 0;
+}
+
+.app-control-label {
+  font-weight: bold;
+}
+
+.border-radius-none {
+  border-radius: 0px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 10px;
+}
+
+.app-navbar .navbar-brand{
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.app-navbar {
+  background-color: rgba(166, 168, 168, 0.16) !important;
+  color: rgba(107, 163, 66, 0.99) !important;
+  box-shadow: 0 4px 4px -4px #333333;
+  border-color: rgba(166, 168, 168, 0.16);
+  margin-bottom: 2px;
+  height: 50px;
+}
+
+.app-navbar-1 {
+  background-color: rgba(107, 163, 66, 0.99) !important;
+  color: rgba(166, 168, 168, 0.16) !important;
+  box-shadow: 0 4px 4px -4px #333333;
+  border-color: rgba(107, 163, 66, 0.99);
+  margin-bottom: 2px;
+  height: 50px;
+}
+
+.form-control{
+  color: #938F8F;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+   font-weight: bold; 
+   text-transform: uppercase;
+  /* text-transform: uppercase; */
+  /*letter-spacing: .5px;*/
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: none !important;
+  color: #f4f4f4 !important;
+  background-color: transparent !important;
+}
+
+a.list-group-item {
+  background-color: #fff;
+  /*letter-spacing: .5px;*/
+  /* padding: 8px; */
+}
+
+;
+a.list-group-item:hover,
+a.list-group-item:focus {
+  background-color: #fff;
+  font-weight: bold;
+  /*color: blue;*/
+  /*text-decoration: none;*/
+  /*background-color: yellow;*/
+}
+
+a.app-list-group-item{
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 0px;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 0px;
+  border: 1px solid rgb(229, 229, 229);
+}
+
+a.app-list-group-item:hover,
+a.app-list-group-item:focus {
+  font-weight: bold;
+  background-color: rgba(107, 163, 66, 0.99);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border: 1px solid rgb(229, 229, 229);
+  font-size: 14px;
+  /*margin-bottom: 2px;*/
+}
+
+a.app-list-group-item.active,
+a.app-list-group-item.active:hover,
+a.app-list-group-item.active:focus {
+  font-weight: bold;
+  background-color: rgba(107, 163, 66, 0.99);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border: 1px solid rgb(229, 229, 229);
+  font-size: 14px;
+  /*-webkit-box-shadow: 0 6px 6px -6px #333333;*/
+  /*-moz-box-shadow: 0 6px 6px -6px #333333;*/
+  /*box-shadow: 0 6px 10px -6px #333333;*/
+}
+
+a.submenu {
+  display: block;
+  background: #F5F5F5;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(0, 136, 204);
+  margin: 4px auto;
+  padding: 5px;
+  padding-left: 20px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  outline: none !important;
+  border: none;
+  /*font-family: Roboto Light !important;*/
+}
+
+a.submenu:hover,
+a.submenu:focus {
+  margin: 4px auto;
+  text-shadow: none !important;
+  background: white;
+  color: rgba(107, 163, 66, 0.99);
+}
+
+a.submenu.active {
+  margin: 4px auto;
+  text-shadow: none !important;
+  background: rgb(0, 136, 204);
+  color: white;
+}
+
+.dropdown-menu > li > a.submenu:hover,
+.dropdown-menu > li > a.submenu:focus,
+.dropdown-menu > li > a.submenu.active {
+  text-shadow: none !important;
+  background: #FFBD03;
+  color: #015682;
+}
+
+.app-main-content {
+  /*overflow: auto;*/
+  height: 100vh;
+}
+
+.app-col {
+  padding: 0px;
+}
+
+.lmap-btn-default {
+  color: #015682 !important;
+  border: solid thin #ddd !important;
+  background: #F4F6F3 !important;
+  box-shadow: none;
+  border-radius: 0px;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.lmap-btn-default:hover {
+  background: #F5F5F5 !important;
+  box-shadow: 1px 1px 1px 1px #999 !important;
+}
+.list-group-item{
+  border:none;
+}
+
+.app-outer-container {
+  /*height: 100vh;*/
+  /*overflow: auto;*/
+}
+
+.app-inner-container {
+  height: 70vh;
+  overflow: auto;
+  margin: 15px auto;
+}
+
+.panel-group .panel+.panel {
+    margin-top: 0px;
+}
+
+.panel > .app-panel-heading {
+  padding: 20px; border: solid 1px rgba(218, 215, 215, 0.65);border-radius: 0px;
+}
+
+.box-flexy {
+  border: medium none !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  width: 100%;
+}
+
+.box-sm {
+  border: medium none !important;
+  max-height: 45vh;
+  overflow-y: auto !important;
+  width: 100%;
+}
+
+
+/**********angular-growl***********/
+
+.growl {
+  width: 100%;
+  position: absolute;
+}
+
+.growl-item.ng-enter,
+.growl-item.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.growl-item {
+  /*padding: 5px;*/
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  position: fixed;
+  width: 50%;
+  min-height: 25px;
+  z-index: 9999;
+  display: block;
+  margin: 10px;
+  /*margin-top: 60px;*/
+  margin-left: 400px;
+}
+
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+
+/**********angular-growl-end***********/
+
+
+/**********angular-calander-start***********/
+
+#calendar {
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+  border-color: #ccc !important;
+}
+
+.fc-day-grid-event {
+  margin: 5px 5px 5px 5px !important;
+  padding: 5px 10px !important
+}
+
+.fc-basic-view td.fc-day-number,
+.fc-basic-view td.fc-week-number span {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding: 2px 10px !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  background: linear-gradient(to right, transparent 75%, #37AAFC 10%) !important;
+}
+
+.fc-event {
+  position: relative;
+  display: block;
+  font-size: 11px !important;
+  line-height: 1.3;
+  border-radius: 3px;
+  font-weight: 400
+}
+
+.fc-day-header {
+  background: #015682;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border: none !important;
+  padding: 3px 0 !important;
+}
+
+.fc-day-header.fc-sun {
+  background: #37AAFC !important;
+  color: #fff;
+  font-size: 14px;
+  border: none !important;
+  padding: 3px 0 !important;
+}
+
+.fc-toolbar {
+  background: #016FA5;
+  padding: 20px 10px;
+  color: #FFFFFF;
+  border: none !important;
+  font-weight: 400;
+  margin-bottom: 0px !important;
+}
+
+.fc-toolbar .fc-left h2 {
+  font-family: Roboto Light !important;
+  letter-spacing: normal !important;
+}
+
+.fc-row.fc-week.fc-widget-content {
+  height: 110px !important;
+}
+
+.fc-unthemed .fc-today {
+  background: #9fc5f8 !important;
+}
+
+.route-heading {
+  padding: 0px 10px;
+}
+
+
+/**********angular-calander-end***********/
+
+.error {
+  color: red;
+}
+
+.app-slip {
+  background: #FFFFFF !important;
+  color: black !important;
+}

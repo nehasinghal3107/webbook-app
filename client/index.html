@@ -1,0 +1,124 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="webBookApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" media="all" type="image/x-icon" href="favicon.ico">
+  <title>WebBook</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(client) app/vendor.css -->
+  <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+  <!-- bower:css -->  
+  <link rel="stylesheet" href="bower_components/angular-growl/build/angular-growl.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+
+  <!-- build:css({.tmp,client}) app/app.css -->
+  <!-- injector:css -->
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- endinjector -->
+  <!-- endbuild -->
+</head>
+
+<body id="body" ng-controller="webBookAppCtrl">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <!-- main view starts -->
+  <div growl></div>
+  <div id="main-app-container" class="main-app-container">
+    <div ui-view></div>
+  </div>
+  <div id="footer" class="prodo-footer-theme" >   
+      <div id="prodo-row-footer" style="padding:10px; margin:10px auto;" class="row"> 
+        <div id="footer-col-md-2" class="col-xs-4 col-sm-4 col-md-4 col-md-offset-1"> 
+          <nav><h5 id="" style="color:white;letter-spacing:1px;" class="">200,000 users registered since, January.</h5> 
+            <p style="color:white;letter-spacing:1px;">We've created a product that will help your startup to even look better.</p> 
+            <p><a href="" class="label label-success">Follow</a>&nbsp;&nbsp;<a href="" class="label label-default">like</a></p>
+            <hr>
+            <div class="row" style="margin;0px;">
+              <div style="color:#908A8A;letter-spacing:.5px;font-weight:bold;font-size:12px;" class="col-xs-4 col-sm-4 col-md-4">Terms of Service</div>
+              <div style="color:#908A8A;letter-spacing:.5px;font-weight:bold;font-size:12px;" class="col-xs-4 col-sm-4 col-md-4">Special Terms</div>
+              <div style="color:#908A8A;letter-spacing:.5px;font-weight:bold;font-size:12px;" class="col-xs-4 col-sm-4 col-md-4">Privacy Policy</div>
+            </div>
+          </nav> 
+        </div> 
+        <div class="col-xs-2 col-sm-2 col-md-2"> 
+            <nav><h5 style="color:white;letter-spacing:1px;font-weight:bold;font-size:14px;" id="" class="">Categories</h5> 
+                <ul id="footer-nav-list"> 
+                    <li><a href=""  class="">About Us</a></li> 
+                    <li><a href="" class="">Blog</a></li> 
+                    <li><a href="" class="">Team</a></li>  
+                    <li><a href="" class="">Career</a></li> 
+                    <li><a href="" class="">Contact</a></li> 
+                </ul> 
+            </nav> 
+        </div> 
+        <div class="col-xs-2 col-sm-2 col-md-2"> 
+            <nav><h5 style="color:white;letter-spacing:1px;font-weight:bold;font-size:14px;" id="" class="">Follow us</h5> 
+                <ul id="footer-nav-list"> 
+                    <li><a href=""  class="">Facebook</a></li> 
+                    <li><a href="" class="">Twitter</a></li> 
+                    <li><a href="" class="">Instagram</a></li> 
+                </ul> 
+            </nav> 
+        </div> 
+        <div class="col-xs-2 col-sm-2 col-md-2"> 
+          <nav><h5 style="color:white;letter-spacing:1px;font-weight:bold;font-size:14px;" id="" class=""></h5> 
+              <ul id="footer-nav-list"> 
+                  <li><a href="" class="btn btn-sm btn-danger" >Buy App</a></li>
+                  <br> 
+                  <li><a href="" class="">or Learn more</a></li> 
+              </ul> 
+          </nav> 
+        </div> 
+      </div>
+    </div>
+  <!-- main view ends -->
+  <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-block-ui/dist/angular-block-ui.min.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <script src="bower_components/angular-growl/build/angular-growl.js"></script>
+      <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+      <script src="bower_components/moment/min/moment.min.js"></script>
+      <!-- endbower -->
+    <!-- endbuild -->    
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+      <!-- build:js({.tmp,client}) app/app.js -->
+      <script src="app/webBookApp.controller.js"></script>
+      <script src="app/webBookApp.routes.js"></script>
+      <!-- injector:js -->
+
+      <!-- user -->
+      <script src="app/account/user/user.controller.js"></script>
+      <script src="app/account/user/user.service.js"></script>
+      <!-- enduser -->
+
+  </body>
+</html>

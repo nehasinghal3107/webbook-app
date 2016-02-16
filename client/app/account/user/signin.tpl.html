@@ -1,0 +1,44 @@
+<!-- Prodonus Signin View Template -->
+<div id="prodo-view-signin">
+ 
+  <form id="prodo-form-signin" name="signinForm" class="css-form" ng-submit="signin()" novalidate>
+
+    <div class="control-group">
+
+      <h4 id="prodo-signin-heading" class="prodo-heading-theme">Sign In</h4>
+
+      <hr class="prodo-wizard-hr" size=3 noshade>
+
+      <input name="username" class="prodo-input-signin form-control" type="text" placeholder="Email or username" required ng-model="user.email" /> 
+    
+    
+      <input type="password" class="prodo-input-signin form-control" id="password1" name="password" placeholder="Password" ng-model="user.password" required>
+
+      <label class="prodo-signin-remember-label prodo-signin-text-theme label-control">
+        <input id="prodo-input-remember-signin" type="checkbox" ng-model="user.remember">&nbsp;Remember me
+      </label>
+
+      <a href="" id="prodo-signin-forgot-link" class="prodo-signin-text-theme" ui-sref="prodo.landing.forgotpassword">Forgot password?</a>
+
+    </div> 
+    <div ng-show="(signinForm.username.$dirty && signinForm.username.$invalid) || (signinForm.password.$dirty && signinForm.password.$invalid) || (signinForm.$invalid && signinForm.submitted)" class="prodo-alert-error-container alert alert-danger">
+      <ul class="error-ul">
+        <li ng-show="(signinForm.username.$dirty && signinForm.username.$invalid && signinForm.submitted) || (signinForm.username.$invalid && signinForm.submitted) || (signinForm.username.$dirty && signinForm.username.$error.required)">Username or email is required</li>
+        <li ng-show="(signinForm.password.$dirty && signinForm.password.$error.required)|| (signinForm.password.$invalid && signinForm.submitted)">Password is required</li>
+      </ul>
+    </div> 
+
+    <button id="prodo-button-signin" class="prodo-button-theme btn btn-sm btn-primary">Sign In&nbsp;&nbsp;<div prodo-spinner></div></button>
+
+    
+
+  </form>
+
+</div>
+  
+     
+
+
+  
+
+     
