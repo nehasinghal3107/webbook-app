@@ -43,4 +43,71 @@ angular.module('webBookApp')
           }
         }
       })
+      .state('home.user', {
+        views: {
+          'navbar': {
+            templateUrl: 'components/partials/views/navbar.tpl.html'
+          },
+          'content': {
+            templateUrl: 'app/account/user/user.profile.tpl.html',
+            controller: 'userProfileController'
+          }
+        }
+      })
+      .state('home.user.about', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.about.tpl.html'
+          }
+        }
+      })
+      .state('home.user.answers', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.answers.tpl.html'
+          }
+        }
+      })
+      .state('home.user.questions', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.questions.tpl.html'
+          }
+        }
+      })
+      .state('home.user.activities', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.activities.tpl.html'
+          }
+        }
+      })
+      .state('home.user.following', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.following.tpl.html'
+          }
+        }
+      })
+      .state('home.user.followers', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.followers.tpl.html'
+          }
+        }
+      })
+      .state('home.user.blogs', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.blogs.tpl.html'
+          }
+        }
+      })
+      .state('home.user.posts', {
+        views: {
+          'content-view': {
+            templateUrl: 'app/account/user/user.profile.posts.tpl.html'
+          }
+        }
+      })
   }]);

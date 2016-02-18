@@ -23,6 +23,6 @@ angular.module('webBookApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'ngCook
 .controller('webBookAppCtrl', ['$scope', '$rootScope', '$state', '$log', '$http', '$cookieStore', 'blockUI', 'growl', function($scope, $rootScope, $state, $log, $http, $cookieStore, blockUI, growl) {
  
   console.log('initializing........')
-  $state.transitionTo('home.landing.view');
+  $state.transitionTo('home.user.about');
 
 }]);

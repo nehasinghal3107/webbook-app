@@ -1,0 +1,156 @@
+<div class="user-profile-main-container">
+	<div class="row" style="margin:10px auto;">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="main-details-container" style="">
+						<div class="row">
+							<div class="col-md-3">
+								<img src="assets/images/imagenotavailable.png" alt="..." class="img-circle img-responsive">
+							</div>
+							<div class="col-md-9">
+								<h3>Neha Singhal</h3>
+								<p class="text-justify text-muted">Add a description about yourself</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-md-3">	
+								<div class="link-heading">
+									<h5>General Feed</h5>
+									<hr>
+								</div>
+							  <div class="profile-link">
+							  	<ul class="list-group">
+									  <li class="list-group-item"><a href="" ui-sref="home.user.about">About</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.answers">Answers</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.questions">Questions</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.posts">Posts</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.blogs">Blogs</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.activities">Activities</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.followers">Followers</a></li>
+									  <li class="list-group-item"><a href="" ui-sref="home.user.following">Following</a></li>
+									</ul>
+							  </div>		
+							</div>
+							<div class="col-md-9">
+								<div ui-view="content-view"></div>			
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="basic-details-container" style="padding:10px;border: 1px dashed #ccc;background: #f6f6f6;border-radius: 3px;">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="deatail-heading">
+									<h4>Neha, add details about what you know.</h4>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row" style="margin:10px auto;padding:5px;border: 1px solid #ccc;background: #fff;border-radius: 3px;">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-muted text-justify" style="text-transform:uppercase;margin-bottom:2px;"><strong>Knows About</strong></p>
+												<hr style="border-top: 1px solid rgba(199, 189, 189, 0.7); margin:5px auto;">
+												<p>What topics do you know about?</p>
+											</div>
+										</div>
+										<div class="row" style="margin:10px auto;">
+											<div class="col-md-8">
+												<div class="">
+		                      <input type="text" name="topic" class="form-control input-custom input-sm" placeholder="Enter topics of your interest" ng-model="profile.topic" />
+		                    </div>
+											</div>
+											<div class="col-md-4">
+												<div class="">
+		                      <button class="btn btn-primary btn-sm btn-block">Add</button>
+		                    </div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row" style="margin:10px auto;padding:5px;border: 1px solid #ccc;background: #fff;border-radius: 3px;">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-muted text-justify" style="text-transform:uppercase;margin-bottom:2px;"><strong>Education</strong></p>
+												<hr style="border-top: 1px solid rgba(199, 189, 189, 0.7); margin:5px auto;">
+												<p>Where have you studied?</p>
+											</div>
+										</div>
+										<div class="row" style="margin:10px auto;">
+											<div class="col-md-8">
+												<div class="">
+		                      <input type="text" name="subject" class="form-control input-custom input-sm" placeholder="Enter subjects you studied" ng-model="profile.subject" />
+		                    </div>
+											</div>
+											<div class="col-md-4">
+												<div class="">
+		                      <button class="btn btn-primary btn-sm btn-block">Add</button>
+		                    </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row" style="margin:10px auto;padding:5px;border: 1px solid #ccc;background: #fff;border-radius: 3px;">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-muted text-justify" style="text-transform:uppercase;margin-bottom:2px;"><strong>Employment</strong></p>
+												<hr style="border-top: 1px solid rgba(199, 189, 189, 0.7); margin:5px auto;">
+												<p>Where have you worked?</p>
+											</div>
+										</div>
+										<div class="row" style="margin:10px auto;">
+											<div class="col-md-8">
+												<div class="">
+			                    <input type="text" name="employement" class="form-control input-custom input-sm" placeholder="Enter employement" ng-model="profile.work" />
+			                  </div>
+											</div>
+											<div class="col-md-4">
+												<div class="">
+			                    <button class="btn btn-primary btn-sm btn-block">Add</button>
+			                  </div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row" style="margin:10px auto;padding:5px;border: 1px solid #ccc;background: #fff;border-radius: 3px;">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-muted text-justify" style="text-transform:uppercase;margin-bottom:2px;"><strong>Location</strong></p>
+												<hr style="border-top: 1px solid rgba(199, 189, 189, 0.7); margin:5px auto;">
+												<p>Where do you currently live?</p>
+											</div>
+										</div>
+										<div class="row" style="margin:10px auto;">
+											<div class="col-md-8">
+												<div class="">
+			                    <input type="text" name="location" class="form-control input-custom input-sm" placeholder="Enter location" ng-model="profile.location" />
+			                  </div>
+											</div>
+											<div class="col-md-4">
+												<div class="">
+			                    <button class="btn btn-primary btn-sm btn-block">Add</button>
+			                  </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
