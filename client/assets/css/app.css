@@ -29,6 +29,11 @@ body {
   
 }
 
+.navbar {
+     /*z-index: 1000; */
+    border-radius: 0px;
+}
+
 .row{
   margin: 0px;
 }
@@ -372,8 +377,8 @@ a.submenu.active {
   border:none;
 }
 
-.app-outer-container {
-  /*height: 100vh;*/
+.app-container {
+  min-height: 70vh;
   /*overflow: auto;*/
 }
 

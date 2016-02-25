@@ -8,95 +8,7 @@ angular.module('webBookApp')
   function ($rootScope, $resource, $http, $state, $log) {
     var UserService = {
         Signup: $resource('http://mashbook.swamisamaj.com/user-registration/', {}, { saveUser: { method: 'POST' } }),
-        Signin: $resource('/api/user/signin', {}, { signinUser: { method: 'POST' } }),
-        Author: $resource('/api/author', {}, { sendAuthorApplication: { method: 'POST' } }),
-        UpdateAuthor: $resource('/api/author/:authorid', {}, { updateAuthorBlogCategory: { method: 'PUT', params: { authorid: '@authorid' } } }),
-        ManageUser: $resource('/api/user/:userid', {}, {
-          getAllUsers: {
-            method: 'GET',
-            isArray: true
-          },
-          getUserSettings: {
-            method: 'GET',
-            params: { userid: '@userid' },
-            isArray: false
-          },
-          updateUserSettings: {
-            method: 'PUT',
-            params: { userid: '@userid' },
-            isArray: false
-          },
-          deleteUserSettings: {
-            method: 'DELETE',
-            params: { userid: '@userid' }
-          }
-        }),
-        User_Invites: $resource('/api/userinvites', {}, {
-          sendUserInvites: { 
-            method: 'POST', 
-            isArray: false
-          }
-        }),
-        Update_Email: $resource('/api/changeemail/:userid', {}, {
-          updateEmailSettings: { 
-            method: 'POST',
-            params: { userid: '@userid' }, 
-            isArray: false
-          }
-        }),
-        Change_Password: $resource('/api/changepassword/:userid', {}, {
-          updatePasswordSettings: { 
-            method: 'POST', 
-            params: { userid: '@userid' },
-            isArray: false
-          }
-        }),
-        ForgotPassword: $resource('/api/user/forgotpassword', {}, { forgotPassword: { method: 'POST' } }),
-        ResetPassword: $resource('/api/user/resetpassword/:userid', {}, {
-          resetPassword: {
-            method: 'PUT',
-            params: { userid: '@userid' },
-            isArray: false
-          }
-        }),
-        RegenerateToken: $resource('/api/regenerateverificationtoken', {}, { regenerateToken: { method: 'POST' } }),
-        IsUserLoggedin: $resource('/api/isloggedin', {}, { checkUserSession: { method: 'GET' } }),
-        Logout: $resource('/api/logout', {}, { logoutUser: { method: 'GET' } }),
-        Product_Followed: $resource('/api/myproductsfollowed?prodles=:data', {}, {
-          getProduct_Followed: { 
-            method: 'GET', 
-            params: { data: '@data' }
-          }
-        }),
-        Product_Recommend: $resource('/api/myrecommendproducts?prodles=:data', {}, {
-          getProduct_Recommend: { 
-            method: 'GET', 
-            params: { data: '@data' }
-          }
-        }),
-        Product_Follow: $resource('/api/user/follow/:data', {}, {
-          followProduct: { 
-            method: 'GET', 
-            params: { data: '@data' }
-          }
-        }),
-        Product_Unfollow: $resource('/api/user/unfollow/:data', {}, {
-          unfollowProduct: { 
-            method: 'GET', 
-            params: { data: '@data' }
-          }
-        }),
-        User_Profile: $resource('/api/profileinfo/:userid', {}, {
-          getUserProfile: {
-            method: 'GET',
-            params: { userid: '@userid' }
-          }
-        }),
-        Activate_Request: $resource('/api/activateaccountrequest', {}, {
-          sendAccountActivateRequest: {
-            method: 'POST'
-          }
-        })
+        Signin: $resource('/api/user/signin', {}, { signinUser: { method: 'POST' } })
       };
     var session = {};
     session.isLoggedIn = false;
@@ -104,12 +16,16 @@ angular.module('webBookApp')
     session.productfollowlist = [];
 
     session.signupUser = function (userdata) {
-      UserService.Signup.saveUser(userdata, function (success) {
-        $log.debug(success);
-        $rootScope.$broadcast('signupDone', success);
-      }, function (error) {
-        $log.debug(error);
-        $rootScope.$broadcast('signupNotDone', error.status);
+      $http({
+        method: 'POST',
+        url: 'http://mashbook.swamisamaj.com/user-registration/',
+        data: userdata
+      }).then(function successCallback(response) {
+        $log.debug(response);
+        $rootScope.$broadcast('signupDone', response);
+      }, function errorCallback(response) {
+        $log.debug(response);
+        $rootScope.$broadcast('signupNotDone', response);
       });
     };
 
@@ -144,12 +60,16 @@ angular.module('webBookApp')
     };
 
     session.signinUser = function (userdata) {
-      UserService.Signin.signinUser(userdata, function (success) {
-        $log.debug(success);
-        $rootScope.$broadcast('signinDone', success);
-      }, function (error) {
-        $log.debug(error);
-        $rootScope.$broadcast('signinNotDone', error.status);
+      $http({
+        method: 'POST',
+        url: 'http://mashbook.swamisamaj.com/get-user-token/',
+        data: userdata
+      }).then(function successCallback(response) {
+        $log.debug(response);
+        $rootScope.$broadcast('signinDone', response);
+      }, function errorCallback(response) {
+        $log.debug(response);
+        $rootScope.$broadcast('signinNotDone', response);
       });
     };
 

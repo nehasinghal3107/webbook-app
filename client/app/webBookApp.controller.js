@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('webBookApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'ngCookies', 'ngSanitize', 'angular-growl', 'blockUI'])
+angular.module('webBookApp', ['ui.router', 'mgcrea.ngStrap', 'ngResource', 'ngCookies', 'ngSanitize', 'angular-growl', 'blockUI', 'ngAnimate'])
 
 .config(['$logProvider', 'growlProvider', '$httpProvider', 'blockUIConfig', '$locationProvider', function($logProvider, growlProvider, $httpProvider, blockUIConfig, $locationProvider) {
-  $logProvider.debugEnabled(false);
+  $logProvider.debugEnabled(true);
   growlProvider.globalTimeToLive(5000);
   growlProvider.onlyUniqueMessages(true);
   growlProvider.messagesKey("errors");
@@ -23,6 +23,10 @@ angular.module('webBookApp', ['ui.router', 'ui.bootstrap', 'ngResource', 'ngCook
 .controller('webBookAppCtrl', ['$scope', '$rootScope', '$state', '$log', '$http', '$cookieStore', 'blockUI', 'growl', function($scope, $rootScope, $state, $log, $http, $cookieStore, blockUI, growl) {
  
   console.log('initializing........')
-  $state.transitionTo('home.user.about');
+//   $scope.modal = {
+//   "title": "Title",
+//   "content": "Hello Modal<br />This is a multiline message!"
+// };
+  $state.transitionTo('home.landing.view');
 
 }]);

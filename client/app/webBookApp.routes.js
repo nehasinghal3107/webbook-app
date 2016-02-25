@@ -28,21 +28,6 @@ angular.module('webBookApp')
           }
         }
       })
-      .state('home.landing.login', {
-        views: {
-          'landing-view': {
-            templateUrl: 'app/account/user/signin.tpl.html'
-          }
-        }
-      })
-      .state('home.landing.signup', {
-        views: {
-          'landing-view': {
-            templateUrl: 'app/account/user/signup.tpl.html',
-            controller: 'userController'
-          }
-        }
-      })
       .state('home.user', {
         views: {
           'navbar': {

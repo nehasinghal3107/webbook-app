@@ -1,44 +1,47 @@
-<!-- Prodonus Signin View Template -->
-<div id="prodo-view-signin">
- 
-  <form id="prodo-form-signin" name="signinForm" class="css-form" ng-submit="signin()" novalidate>
-
-    <div class="control-group">
-
-      <h4 id="prodo-signin-heading" class="prodo-heading-theme">Sign In</h4>
-
-      <hr class="prodo-wizard-hr" size=3 noshade>
-
-      <input name="username" class="prodo-input-signin form-control" type="text" placeholder="Email or username" required ng-model="user.email" /> 
-    
-    
-      <input type="password" class="prodo-input-signin form-control" id="password1" name="password" placeholder="Password" ng-model="user.password" required>
-
-      <label class="prodo-signin-remember-label prodo-signin-text-theme label-control">
-        <input id="prodo-input-remember-signin" type="checkbox" ng-model="user.remember">&nbsp;Remember me
-      </label>
-
-      <a href="" id="prodo-signin-forgot-link" class="prodo-signin-text-theme" ui-sref="prodo.landing.forgotpassword">Forgot password?</a>
-
-    </div> 
-    <div ng-show="(signinForm.username.$dirty && signinForm.username.$invalid) || (signinForm.password.$dirty && signinForm.password.$invalid) || (signinForm.$invalid && signinForm.submitted)" class="prodo-alert-error-container alert alert-danger">
-      <ul class="error-ul">
-        <li ng-show="(signinForm.username.$dirty && signinForm.username.$invalid && signinForm.submitted) || (signinForm.username.$invalid && signinForm.submitted) || (signinForm.username.$dirty && signinForm.username.$error.required)">Username or email is required</li>
-        <li ng-show="(signinForm.password.$dirty && signinForm.password.$error.required)|| (signinForm.password.$invalid && signinForm.submitted)">Password is required</li>
-      </ul>
-    </div> 
-
-    <button id="prodo-button-signin" class="prodo-button-theme btn btn-sm btn-primary">Sign In&nbsp;&nbsp;<div prodo-spinner></div></button>
-
-    
-
-  </form>
-
-</div>
-  
-     
-
-
-  
-
-     
+<div id="user-modal" class="modal" tabindex="-1" role="dialog" ng-controller="userController">
+  <div class="modal-dialog" style="margin:100px auto;">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="content-container">
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="$hide()"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6" style="border-right:1px #ccc solid;">
+              <form name="form.signupForm" class="css-form" novalidate>
+                <div class="control-group">
+                  <h4 id="prodo-signup-heading" class="prodo-heading-theme">New User? Join Us!</h4>
+                  <input name="username" class="prodo-form-input-signup form-control" type="text" placeholder="Enter username" required ng-model="user_signup.username" />
+                  <br>
+                  <input name="email" class="prodo-form-input-signup form-control" type="email" placeholder="Enter Email" required ng-model="user_signup.email" />
+                  <br>
+                  <input name="password" class="prodo-form-input-signup form-control" type="password" placeholder="Enter Password" required ng-model="user_signup.password" />
+                  <p id="prodo-general-terms" class="prodo-terms-text-theme" style="font-size:11px;margin:2px;">By clicking Sign Up, you agree to our<a href="" class="link prodo-general-terms-link"> Terms</a>&nbsp;and &nbsp;<a href="" class="link prodo-general-terms-link">Privacy Policy</a>.</p>
+                  <br>
+                  <button type="submit" class="lmap-btn-primary btn btn-primary btn-sm btn-block" ng-click="signup()"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;Join us now!</button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <form name="form.signinForm" class="css-form" novalidate>
+                <div class="control-group">
+                  <h4 id="prodo-signup-heading" class="prodo-heading-theme">Already Joined? Sign In!</h4>
+                  <input name="username" class="prodo-form-input-signup form-control" type="username" placeholder="Enter Username" required ng-model="user_signin.username" />
+                  <br>
+                  <input name="password" class="prodo-form-input-signup form-control" type="password" placeholder="Enter Password" required ng-model="user_signin.password" />
+                  <br>
+                  <button type="submit" class="lmap-btn-primary btn btn-primary btn-sm btn-block" ng-click="signin()"><i class="fa fa-sign-in"></i>&nbsp;&nbsp;&nbsp;Sign in now!</button>
+                  <p><center><strong>Or</strong></center></p>
+                  <br>
+                  <button type="submit" class="lmap-btn-danger btn btn-danger btn-sm btn-block" ng-click=""><i class="fa fa-google-plus"></i>&nbsp;&nbsp;&nbsp;Sign in with Google+</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
