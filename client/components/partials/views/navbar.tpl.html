@@ -15,9 +15,20 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul style="margin:0px;" class="nav navbar-nav navbar-right">
-        <li><a href="" data-animation="am-fade-and-scale" data-placement="center" data-template-url="app/account/user/signin.tpl.html" bs-modal="modal" data-backdrop="static">Sign Up | Sign In</a></li>
+      <ul style="margin:0px;" class="nav navbar-nav navbar-right" ng-show="!userdata.token">
+        <li><a href="" data-animation="am-fade-and-scale" data-placement="center" data-backdrop="static" ng-click="showLogin()">Sign Up | Sign In</a></li>
         <li><a href="">Help</a></li>
+      </ul>
+      <ul style="margin:0px;" class="nav navbar-nav navbar-right" ng-show="userdata.token">
+        <li><a href=""><i class="fa fa-bell"></i></a></li>
+        <li><a href=""><i class="fa fa-home"></i>&nbsp;Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userdata.username}} &nbsp;<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="" ui-sref="home.user.about"><i class="fa fa-user"></i>&nbsp;Profile</a></li>
+            <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -11,22 +11,54 @@ angular.module('webBookApp', ['ui.router', 'mgcrea.ngStrap', 'ngResource', 'ngCo
   growlProvider.messageSeverityKey("field");
   blockUIConfig.message = 'loading...';
   blockUIConfig.delay = 100;
-  // $httpProvider.defaults.headers.common.xsrfCookieName = 'csrftoken'; 
-  // $httpProvider.defaults.headers.common.xsrfHeaderName = 'X-CSRFToken'; 
-  // $httpProvider.defaults.headers.common.withCredentials = true;
 }])
 
-.run(['$rootScope', '$state', '$location', '$log', '$http', function($rootScope, $state, $location, $log, $http) {
+.run(['$rootScope', '$state', '$location', '$log', '$http', 'UserService', function($rootScope, $state, $location, $log, $http, UserService) {
   $rootScope.$log = $log;
+  $rootScope.userdata = {};
+  var user_data = UserService.checkIfUserSessionExist(); 
+  console.log(user_data);
+  if (user_data) {
+    $rootScope.userdata = user_data;
+  };
 }])
 
-.controller('webBookAppCtrl', ['$scope', '$rootScope', '$state', '$log', '$http', '$cookieStore', 'blockUI', 'growl', function($scope, $rootScope, $state, $log, $http, $cookieStore, blockUI, growl) {
+.controller('webBookAppCtrl', ['$scope', '$rootScope', '$state', '$log', '$http', '$cookieStore', 'blockUI', 'growl', '$modal', function($scope, $rootScope, $state, $log, $http, $cookieStore, blockUI, growl, $modal) {
  
-  console.log('initializing........')
-//   $scope.modal = {
-//   "title": "Title",
-//   "content": "Hello Modal<br />This is a multiline message!"
-// };
+  console.log('initializing........');
+
   $state.transitionTo('home.landing.view');
+
+  var loginModal;
+
+  $scope.showLogin = function (){
+    loginModal = $modal({
+      scope: $scope,
+      show: true,
+      animation: 'am-fade-and-scale',
+      placement: 'center',
+      backdrop: 'static',
+      templateUrl:'app/account/user/signin.tpl.html'
+    });
+  };
+
+  $scope.hideLogin = function (){
+    loginModal.$promise.then(loginModal.hide);
+  };
+
+  $scope.logout = function(){
+    $cookieStore.remove('token');
+    $cookieStore.remove('user');
+    delete $rootScope.userdata;
+    $state.transitionTo('home.landing.view');
+  }
+
+  $scope.ask_a_question = function(){
+    if ($rootScope.userdata && $rootScope.userdata.token) {
+      $state.transitionTo('home.landing.view.askquestion');
+    } else {
+      $scope.showLogin();
+    }
+  }
 
 }]);

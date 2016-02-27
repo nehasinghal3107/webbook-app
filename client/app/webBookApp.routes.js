@@ -18,6 +18,9 @@ angular.module('webBookApp')
           },
           'content': {
             templateUrl: 'components/partials/views/home.landing.tpl.html'
+          },
+          'footer': {
+            templateUrl: 'components/partials/views/footer.tpl.html'
           }
         }
       })
@@ -25,6 +28,20 @@ angular.module('webBookApp')
         views: {
           'landing-view': {
             templateUrl: 'components/partials/views/home.landing.content.tpl.html'
+          }
+        }
+      })
+      .state('home.landing.view.questions', {
+        views: {
+          'content': {
+            templateUrl: 'app/q&a/questions_list.tpl.html'
+          }
+        }
+      })
+      .state('home.landing.view.askquestion', {
+        views: {
+          'content': {
+            templateUrl: 'app/q&a/askquestion.tpl.html'
           }
         }
       })

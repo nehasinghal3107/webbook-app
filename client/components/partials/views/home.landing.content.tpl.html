@@ -15,7 +15,7 @@
 		<div class="col-md-4">
 			<div class="row">
 				<div class="col-md-6">
-					<button type="submit" class="lmap-btn-default btn btn-default btn-sm btn-block" ng-click="confirmDispatchComplete()"><span class="glyphicon glyphicon-check"></span> Ask a Question</button>
+					<button type="submit" class="lmap-btn-default btn btn-default btn-sm btn-block" ng-click="ask_a_question()"><span class="glyphicon glyphicon-check"></span> Ask a Question</button>
 				</div>
 				<div class="col-md-6">
 					<button type="submit" class="lmap-btn-default btn btn-default btn-sm btn-block" ng-click="confirmDispatchComplete()"><span class="glyphicon glyphicon-check"></span> Badges</button>
@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="col-md-8" style="padding:0px;">
 			<div class="question-container">
-				
+				<div ui-view="content"></div>
 			</div>
 		</div>
 		<div class="col-md-4">

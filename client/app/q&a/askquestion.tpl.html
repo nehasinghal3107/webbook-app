@@ -1,0 +1,49 @@
+<div class="askquestion-container" style="padding:10px;margin:10px auto;border-radius:5px;box-shadow:0px 1px 1px 1px #ccc;">
+	<div class="row">
+		<div class="col-md-12" style="">
+			<div class="row">
+				<div class="col-md-12" style="padding:0px">
+					<h4 class="text-justify text-info">Ask a Question ?</h4>
+					<hr>
+				</div>
+			</div>
+      <div class="row">
+        <div class="col-md-4" style="padding:0px"><h5>Summary</h5></div>
+        <div class="col-md-8" style="padding:0px">
+          <input type="text" name="question" placeholder="enter your question here" class="form-control"/>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4" style="padding:0px"><h5>Related Tags</h5></div>
+        <div class="col-md-8" style="padding:0px">
+          <input type="text" name="tags" placeholder="enter tags related to question here" class="form-control" />
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4" style="padding:0px"><h5>Description</h5></div>
+        <div class="col-md-8" style="padding:0px">
+          <textarea placeholder="enter description" rows="6" cols="70" class="form-control"></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4" style="padding:0px"><h5>Attach a file</h5></div>
+        <div class="col-md-8" style="padding:0px">
+          <input type="file" name="tags" placeholder="enter tags related to question here" class="form-control" />
+        </div>
+      </div>
+      <br>
+      <div class="row">
+      	<div class="col-md-4" style="padding:0px"></div>
+      	<div class="col-md-4" style="padding:1px">
+      		<button type="submit" class="lmap-btn-danger btn btn-danger btn-sm btn-block" ng-click="ask_a_question()"><span class="fa fa-times-circle"></span>&nbsp;Reset</button>
+      	</div>
+      	<div class="col-md-4" style="padding:1px">
+      		<button type="submit" class="lmap-btn-primary btn btn-primary btn-sm btn-block" ng-click="ask_a_question()"><span class="fa fa-question-circle"></span>&nbsp;Ask a Question</button>
+      	</div>
+      </div>
+    </div>
+	</div>
+</div>
